@@ -24,16 +24,10 @@ popup.start()
 
 def is_locked(): return popup.is_alive()
 
-if (is_locked()):
-    if (password == ""):
-        os.system("notify-send 'You need to set the password!'")
-        sys.exit()
-    else:
-        time.sleep(1)
-        os.system("ydotool type " + password )
-        os.system("ydotool key 28:1 28:0") # Pressing enter
-        os.system("notify-send 'Keyring unlocked!'") # Give a notification
+time.sleep(1)
+os.system("ydotool type " + password )
+os.system("ydotool key 28:1 28:0") # Pressing enter
+os.system("notify-send 'Keyring unlocked!'") # Give a notification
 
-        time.sleep(0.1)
-        if (is_locked()):
-            os.system("notify-send 'Unlock unsuccessful, incorrect password!'")
+if (is_locked()):
+    os.system("notify-send 'Unlock unsuccessful, incorrect password!'")
