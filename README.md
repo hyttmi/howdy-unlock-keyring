@@ -17,7 +17,7 @@ After setting up `ydotool`, it's necessary to install keyring library with pip3:
 pip3 install keyring
 ```
 
-After that, just download this script, set it executable with `chmod +x unlock.py` and set your password to the beginning of the file where you can see line `password = "" ` (add your password between the double quotes).
+After that, just download this script, set it executable with `chmod +x unlock.py` and set your password to an environment variable locally to your `.profile` file. (E.g. `export LOGIN_PASS='your_password_here'` << this line to the end of the file)
 
 You can then add this script to your Gnome startup applications.
 

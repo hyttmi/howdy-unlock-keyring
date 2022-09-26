@@ -5,8 +5,11 @@ from threading import Thread
 from keyring import get_credential as get_keyring_credential
 
 
-password = ""
+password = os.getenv("LOGIN_PASS")
 delay = 5 # Delay on automatic start, you may need to tune this on your system
+if not password:
+    os.system("notify-send 'You forgot to set your password!'")
+    sys.exit()
 
 time.sleep(delay)
 
