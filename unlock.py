@@ -6,6 +6,9 @@ from keyring import get_credential as get_keyring_credential
 
 
 password = ""
+delay = 5 # Delay on automatic start, you may need to tune this on your system
+
+time.sleep(delay)
 
 def trigger_keyring_unlock_popup():
     try:
@@ -18,7 +21,6 @@ popup.start()
 
 def is_locked(): return popup.is_alive()
 
-time.sleep(0.1)
 if (is_locked()):
     if (password == ""):
         os.system("notify-send 'You need to set the password!'")
