@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import time, os, sys
 from threading import Thread
 from keyring import get_credential as get_keyring_credential
