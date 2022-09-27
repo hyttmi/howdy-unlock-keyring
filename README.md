@@ -1,6 +1,6 @@
 # Unlocking Gnome keyring when logging in without password or with Howdy
 
-When logging in with password or with Howdy using ir-camera, your default login keyring will stay locked until you input your password after you launch an application which needs to access the default keyring. This script was written to automate this process using `ydotool`
+When logging in without password or with Howdy using ir-camera, your default login keyring will stay locked until you input your password after you launch an application which needs to access the login keyring. This script was written to automate this process using `ydotool`
 
 ## Prerequisites (tested on Ubuntu 22.04)
 
